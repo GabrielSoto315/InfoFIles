@@ -1,0 +1,1119 @@
+{
+	"info": {
+		"_postman_id": "2d4f49f0-e44c-46b1-b58a-634501edf127",
+		"name": "BankProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ConfigSevice",
+			"item": [
+				{
+					"name": "Test",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://root:s3cr3t@localhost:18888/BankClient/default",
+							"protocol": "http",
+							"auth": {
+								"user": "root",
+								"password": "s3cr3t"
+							},
+							"host": [
+								"localhost"
+							],
+							"port": "18888",
+							"path": [
+								"BankClient",
+								"default"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SequenceRedis",
+			"item": [
+				{
+					"name": "Test",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:18881/api/sequence/getNext/prueba",
+							"host": [
+								"localhost"
+							],
+							"port": "18881",
+							"path": [
+								"api",
+								"sequence",
+								"getNext",
+								"prueba"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BankClient",
+			"item": [
+				{
+					"name": "Company",
+					"item": [
+						{
+							"name": "List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:18882/api/ClientCompany/",
+									"host": [
+										"localhost"
+									],
+									"port": "18882",
+									"path": [
+										"api",
+										"ClientCompany",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:18081/api/ClientCompany/1910000000001",
+									"host": [
+										"localhost"
+									],
+									"port": "18081",
+									"path": [
+										"api",
+										"ClientCompany",
+										"1910000000001"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idNumber\":\"2046542677661\",\r\n    \"name\":\"Bet564 S.A.C\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:18081/api/ClientCompany/",
+									"host": [
+										"localhost"
+									],
+									"port": "18081",
+									"path": [
+										"api",
+										"ClientCompany",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idNumber\":\"2048432577661\",\r\n    \"name\":\"Sean Garage Plus S.A.C\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:18081/api/ClientCompany/1910000000003",
+									"host": [
+										"localhost"
+									],
+									"port": "18081",
+									"path": [
+										"api",
+										"ClientCompany",
+										"1910000000003"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:18081/api/ClientCompany/1910000000003",
+									"host": [
+										"localhost"
+									],
+									"port": "18081",
+									"path": [
+										"api",
+										"ClientCompany",
+										"1910000000003"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Person",
+					"item": [
+						{
+							"name": "List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:18081/api/ClientPerson/",
+									"host": [
+										"localhost"
+									],
+									"port": "18081",
+									"path": [
+										"api",
+										"ClientPerson",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:18081/api/ClientPerson/1910000000005",
+									"host": [
+										"localhost"
+									],
+									"port": "18081",
+									"path": [
+										"api",
+										"ClientPerson",
+										"1910000000005"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idCard\":\"47612538\",\r\n    \"firstName\":\"Benjamin\",\r\n    \"lastName\":\"De la Cruz Salazar\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:18081/api/ClientPerson/",
+									"host": [
+										"localhost"
+									],
+									"port": "18081",
+									"path": [
+										"api",
+										"ClientPerson",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idCard\":\"47612538\",\r\n    \"firstName\":\"Benjamin\",\r\n    \"lastName\":\"De la Cruz Loayza\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:18081/api/ClientPerson/1910000000006",
+									"host": [
+										"localhost"
+									],
+									"port": "18081",
+									"path": [
+										"api",
+										"ClientPerson",
+										"1910000000006"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:18081/api/ClientPerson/1910000000005",
+									"host": [
+										"localhost"
+									],
+									"port": "18081",
+									"path": [
+										"api",
+										"ClientPerson",
+										"1910000000005"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GetType",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:18081/api/Client/1910000000004",
+							"host": [
+								"localhost"
+							],
+							"port": "18081",
+							"path": [
+								"api",
+								"Client",
+								"1910000000004"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actuator",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:18081/actuator/health",
+							"host": [
+								"localhost"
+							],
+							"port": "18081",
+							"path": [
+								"actuator",
+								"health"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Credit",
+			"item": [
+				{
+					"name": "Credits",
+					"item": [
+						{
+							"name": "List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:18082/api/Credit/",
+									"host": [
+										"localhost"
+									],
+									"port": "18082",
+									"path": [
+										"api",
+										"Credit",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:18082/api/Credit/25210000000001",
+									"host": [
+										"localhost"
+									],
+									"port": "18082",
+									"path": [
+										"api",
+										"Credit",
+										"25210000000001"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreditAccount",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idClient\":\"1910000000005\",\r\n    \"amount\": 25000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:18082/api/Credit/CreditAccount/",
+									"host": [
+										"localhost"
+									],
+									"port": "18082",
+									"path": [
+										"api",
+										"Credit",
+										"CreditAccount",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreditCard",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idClient\":\"1910000000006\",\r\n    \"amount\": 3800\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:18082/api/Credit/CreditCard/",
+									"host": [
+										"localhost"
+									],
+									"port": "18082",
+									"path": [
+										"api",
+										"Credit",
+										"CreditCard",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"balance\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:18082/api/Credit/25210000000001",
+									"host": [
+										"localhost"
+									],
+									"port": "18082",
+									"path": [
+										"api",
+										"Credit",
+										"25210000000001"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:18082/api/Credit/25210000000001",
+									"host": [
+										"localhost"
+									],
+									"port": "18082",
+									"path": [
+										"api",
+										"Credit",
+										"25210000000001"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actuator",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:18082/actuator/health",
+									"host": [
+										"localhost"
+									],
+									"port": "18082",
+									"path": [
+										"actuator",
+										"health"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Transactions",
+					"item": [
+						{
+							"name": "List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:18083/api/CreditTransaction/",
+									"host": [
+										"localhost"
+									],
+									"port": "18083",
+									"path": [
+										"api",
+										"CreditTransaction",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:18083/api/CreditTransaction/630d90e0f4c74f27ae62fc",
+									"host": [
+										"localhost"
+									],
+									"port": "18083",
+									"path": [
+										"api",
+										"CreditTransaction",
+										"630d90e0f4c74f27ae62fc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListAccount",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:18083/api/CreditTransaction/Credit/45210000000002",
+									"host": [
+										"localhost"
+									],
+									"port": "18083",
+									"path": [
+										"api",
+										"CreditTransaction",
+										"Credit",
+										"45210000000002"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Pay",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idCredit\": \"25210000000001\",\r\n    \"amount\": 350.00,\r\n    \"idClient\": \"1910000000005\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:18083/api/CreditTransaction/Pay/",
+									"host": [
+										"localhost"
+									],
+									"port": "18083",
+									"path": [
+										"api",
+										"CreditTransaction",
+										"Pay",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Charge",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idCredit\": \"45210000000002\",\r\n    \"amount\": 120.00,\r\n    \"idClient\": \"1910000000006\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:18083/api/CreditTransaction/Charge/",
+									"host": [
+										"localhost"
+									],
+									"port": "18083",
+									"path": [
+										"api",
+										"CreditTransaction",
+										"Charge",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idClient\": \"1910000000003\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:18083/api/CreditTransaction/630d91e9f4c74f27ae62fcd3",
+									"host": [
+										"localhost"
+									],
+									"port": "18083",
+									"path": [
+										"api",
+										"CreditTransaction",
+										"630d91e9f4c74f27ae62fcd3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idClient\": \"1910000000003\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:18083/api/CreditTransaction/630d91e9f4c74f27ae62fcd3",
+									"host": [
+										"localhost"
+									],
+									"port": "18083",
+									"path": [
+										"api",
+										"CreditTransaction",
+										"630d91e9f4c74f27ae62fcd3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Savings",
+			"item": [
+				{
+					"name": "Savings",
+					"item": [
+						{
+							"name": "List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:18882/api/Saving/",
+									"host": [
+										"localhost"
+									],
+									"port": "18882",
+									"path": [
+										"api",
+										"Saving",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:18084/api/Saving/10210000000005",
+									"host": [
+										"localhost"
+									],
+									"port": "18084",
+									"path": [
+										"api",
+										"Saving",
+										"10210000000005"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SavingAccount",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idClient\":\"1910000000004\",\r\n    \"balance\": 25000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:18084/api/Saving/Saving/",
+									"host": [
+										"localhost"
+									],
+									"port": "18084",
+									"path": [
+										"api",
+										"Saving",
+										"Saving",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CurrentAccount",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idClient\":\"1910000000005\",\r\n    \"balance\": 12000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:18084/api/Saving/Current/",
+									"host": [
+										"localhost"
+									],
+									"port": "18084",
+									"path": [
+										"api",
+										"Saving",
+										"Current",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FIxedTerms",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idClient\":\"1910000000006\",\r\n    \"balance\": 25000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:18084/api/Saving/FixedTerms/",
+									"host": [
+										"localhost"
+									],
+									"port": "18084",
+									"path": [
+										"api",
+										"Saving",
+										"FixedTerms",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"balance\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:18082/api/Credit/25210000000001",
+									"host": [
+										"localhost"
+									],
+									"port": "18082",
+									"path": [
+										"api",
+										"Credit",
+										"25210000000001"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:18082/api/Credit/25210000000001",
+									"host": [
+										"localhost"
+									],
+									"port": "18082",
+									"path": [
+										"api",
+										"Credit",
+										"25210000000001"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Transactions",
+					"item": [
+						{
+							"name": "List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:18085/api/SavingTransaction/",
+									"host": [
+										"localhost"
+									],
+									"port": "18085",
+									"path": [
+										"api",
+										"SavingTransaction",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:18085/api/SavingTransaction/630e94fa2b5fdd5ec3f05a7a",
+									"host": [
+										"localhost"
+									],
+									"port": "18085",
+									"path": [
+										"api",
+										"SavingTransaction",
+										"630e94fa2b5fdd5ec3f05a7a"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListAccount",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:18085/api/SavingTransaction/Saving/10210000000005",
+									"host": [
+										"localhost"
+									],
+									"port": "18085",
+									"path": [
+										"api",
+										"SavingTransaction",
+										"Saving",
+										"10210000000005"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AddFunds",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idSaving\": \"10210000000005\",\r\n    \"amount\": 350.00,\r\n    \"idClient\": \"1910000000005\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:18085/api/SavingTransaction/Add/",
+									"host": [
+										"localhost"
+									],
+									"port": "18085",
+									"path": [
+										"api",
+										"SavingTransaction",
+										"Add",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Charge",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idSaving\": \"10210000000005\",\r\n    \"amount\": 400.00,\r\n    \"idClient\": \"1910000000005\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:18085/api/SavingTransaction/Retire/",
+									"host": [
+										"localhost"
+									],
+									"port": "18085",
+									"path": [
+										"api",
+										"SavingTransaction",
+										"Retire",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idClient\": \"1910000000006\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:18085/api/SavingTransaction/630e94fa2b5fdd5ec3f05a7a",
+									"host": [
+										"localhost"
+									],
+									"port": "18085",
+									"path": [
+										"api",
+										"SavingTransaction",
+										"630e94fa2b5fdd5ec3f05a7a"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idClient\": \"1910000000003\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:18085/api/SavingTransaction/630e94fa2b5fdd5ec3f05a7a",
+									"host": [
+										"localhost"
+									],
+									"port": "18085",
+									"path": [
+										"api",
+										"SavingTransaction",
+										"630e94fa2b5fdd5ec3f05a7a"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
